@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-pod
+  namespace: default
+  labels:
+    env: kubecon-gsk
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: hello-ctr
+    imagePullPolicy: Always
+    image: nigelpoulton/gskworkshop:1.0
+    ports:
+    - containerPort: 8080
+    resources:
+      requests:
+        memory: "128Mi"
+        cpu: "500m"
+      limits:
+        memory: "512Mi"
+        cpu: "1000m"

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-deploy
+  namespace: default
+spec:
+  ## Set to 5 for start of lab
+  replicas: 10
+  selector:
+    matchLabels:
+      env: kubecon-gsk
+  progressDeadlineSeconds: 300
+  minReadySeconds: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        env: kubecon-gsk
+    spec:
+      containers:
+      - name: hello-ctr
+        image: nigelpoulton/gskworkshop:2.0
+        ports:
+        - containerPort: 8080
