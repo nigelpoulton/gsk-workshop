@@ -47,7 +47,7 @@ kubectl apply -f pod.yml
 List and describe the Pod.
 
 ```
-kubectl get pods –watch
+kubectl get pods –-watch
 <Snip>
 
 kubectl describe pod hello-pod
@@ -78,7 +78,7 @@ kubectl get pods --show-labels
 <Snip>
 ```
 
-Copy the Service's publis IP and paste it into your browser on port `9000`.
+Copy the Service's public IP and paste it into your browser on port `9000`.
 
  
 ## Cloud native superpowers – Using Deployments
@@ -122,7 +122,7 @@ kubectl apply -f deploy.yml
 Watch the number of Pods change from 4 down to 2.
 
 ```
-kubectl get pods –watch
+kubectl get pods -–watch
 <Snip>
 
 kubectl get deploy
