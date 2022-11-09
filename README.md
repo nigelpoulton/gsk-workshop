@@ -68,9 +68,9 @@ lke76472-118784-634d2eb354b1   Ready    <none>   4m51s   v1.23.6
 **Congratulations, you're connected to your Kubernetes cluster.**
 
 
-## 5. Clean-up
+## 5. Clean-up (complete when you're FINISHED)
 
-Run the following steps after the workshop is finished to shut down your lab and return to your pre-lab settings.
+Run the following steps **after the workshop is finished to shut down your lab and return to your pre-lab settings.**
 
 You must be logged in to Linode.com to complete these steps.
 
